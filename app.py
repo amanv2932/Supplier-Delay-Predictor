@@ -193,7 +193,7 @@ def train_model(df, mtime):
     }
     
     cv = StratifiedKFold(n_splits=3, shuffle=True, random_state=42)
-    search = RandomizedSearchCV(pipeline, param_distributions=param_grid, n_iter=5, cv=cv, scoring='f1', random_state=42, n_jobs=-1)
+    search = RandomizedSearchCV(pipeline, param_distributions=param_grid, n_iter=5, cv=cv, scoring='f1', random_state=42, n_jobs=1)
     search.fit(X_train, y_train)
     
     model = search.best_estimator_
