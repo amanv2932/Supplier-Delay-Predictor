@@ -18,7 +18,7 @@ from sklearn.metrics import roc_auc_score
 
 
 BASE_DIR = Path(__file__).resolve().parent
-DATA_PATH = BASE_DIR / DATA_PATH
+DATA_PATH = BASE_DIR / "supplier_shipment_delay_dataset.csv"
 
 # --- SETTINGS ---
 st.set_page_config(page_title="Supplier Shipment Delay Predictor", layout="wide")
